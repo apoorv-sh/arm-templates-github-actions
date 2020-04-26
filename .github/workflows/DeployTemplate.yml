@@ -1,0 +1,31 @@
+on:
+  push:
+    branches:
+      - master
+
+name: ARM Template deployment
+
+env:
+  LOCATION: westeurope
+  RESOURCE_GROUP: rg-production-action
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Login to Azure
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+      - name: Checkout
+        uses: actions/checkout@master
+
+      - name: Deploy ARM Template
+        uses: azure/arm-action@v1
+        with:
+          resourceGroupName: GH-Action-Test-RG
+          templateLocation: .azure/template/azuredeploy.json
+          parameters: |
+            xyz_param1=GH_Test_1
+            xyz_param2=GH_Test_2

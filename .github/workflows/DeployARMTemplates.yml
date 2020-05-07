@@ -1,4 +1,4 @@
-Ion: 
+on: 
   push:
     branches:
       - master

@@ -19,7 +19,8 @@ jobs:
       uses: actions/checkout@v2
     
     - name: Deploy ARM Template
-      uses: apoorv33/azure-arm@V6
+      uses: whiteducksoftware/azure-arm-action-js@v2
       with:
         inlineScript: |
-          az --version
+          resourceGroupName: test-rg-1
+          templateLocation: https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/101-app-function/azuredeploy.json

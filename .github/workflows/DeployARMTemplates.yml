@@ -19,7 +19,7 @@ jobs:
       uses: actions/checkout@v2
     
     - name: Deploy ARM Template
-      uses: apoorv33/azure-arm@V5
+      uses: apoorv33/azure-arm@V6
       with:
         inlineScript: |
           az --version

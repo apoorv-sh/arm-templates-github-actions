@@ -1,12 +1,12 @@
-on: 
+Ion: 
   push:
     branches:
       - master
 name: Deploy ARM Template
 
 env:
-  LOCATION: westeurope
-  RESOURCE_GROUP: rg-production-action
+  LOCATION: West India
+  RESOURCE_GROUP: test-rg-1
 
 jobs:
   deploy-arm-template:

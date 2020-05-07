@@ -22,4 +22,4 @@ jobs:
       uses: azure/CLI@v1.0.3
       with:
         inlineScript: |
-          az --version
+          az group deployment create --resource-group test --template-uri https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/101-vm-simple-windows/azuredeploy.json

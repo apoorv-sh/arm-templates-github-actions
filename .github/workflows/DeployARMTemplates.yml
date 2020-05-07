@@ -18,8 +18,8 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
     
-    - name: Azure CLI Deploy ARM Template
-      uses: azure/CLI@v1.0.3
+    - name: Deploy ARM Template
+      uses: apoorv33/azure-arm@V5
       with:
         inlineScript: |
-          az group deployment create --resource-group test-rg-1 --template-uri https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/101-app-function/azuredeploy.json
+          az --version

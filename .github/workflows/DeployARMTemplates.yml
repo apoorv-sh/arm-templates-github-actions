@@ -27,5 +27,5 @@ jobs:
       with:
         azcliversion: 2.0.72
         inlineScript: |
-          az group create --location $LOCATION --name $RESOURCE_GROUP
-          az group deployment create --resource-group $RESOURCE_GROUP --template-file $GITHUB_WORKSPACE/azuredeploy.json
+          az group create --location West India --name test-rg-1
+          az group deployment create test-rg-1 $RESOURCE_GROUP --template-uri https://github.com/apoorv33/arm-templates-github-actions/blob/master/azuredeploy.json

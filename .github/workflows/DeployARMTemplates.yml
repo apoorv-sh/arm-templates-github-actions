@@ -4,10 +4,6 @@ on:
       - master
 name: Deploy ARM Template
 
-env:
-  LOCATION: West India
-  RESOURCE_GROUP: test-rg-1
-
 jobs:
   deploy-arm-template:
     runs-on: ubuntu-latest
@@ -27,5 +23,5 @@ jobs:
       with:
         azcliversion: 2.0.72
         inlineScript: |
-          az group create --location West India --name test-rg-1
+          az group create --location westindia --name test-rg-1
           az group deployment create test-rg-1 $RESOURCE_GROUP --template-uri https://github.com/apoorv33/arm-templates-github-actions/blob/master/azuredeploy.json

@@ -19,7 +19,7 @@ jobs:
       uses: actions/checkout@v2
     
     - name: Azure CLI Deploy ARM Template
-      uses: azure/CLI@v1
+      uses: azure/CLI@v1.0.3
       with:
         inlineScript: |
           az group deployment create -g test-rg-1 --template-uri https://github.com/apoorv33/arm-templates-github-actions/blob/master/azuredeploy.json

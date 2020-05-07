@@ -22,5 +22,4 @@ jobs:
       uses: azure/CLI@v1.0.3
       with:
         inlineScript: |
-          az group create --name rgtest --location westus
-          az group deployment create --resource-group rgtest --template-uri https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/101-vm-simple-windows/azuredeploy.json
+          az group deployment create --resource-group test-rg-1 --template-uri https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/101-app-function/azuredeploy.json

@@ -18,7 +18,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
     
-    - name: Deploy ARM Template
+    - name: Deploy an ARM Template
       uses: apoorv33/azure-arm@V6
       with:
         inlineScript: |

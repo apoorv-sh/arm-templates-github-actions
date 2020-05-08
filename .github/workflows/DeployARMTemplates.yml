@@ -22,4 +22,4 @@ jobs:
       uses: apoorv33/azure-arm@V6
       with:
         inlineScript: |
-          az group deployment create --resource-group test-rg-1 --template-uri https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/101-app-function/azuredeploy.json
+          az group deployment create --resource-group test1 --template-uri https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/101-app-function/azuredeploy.json
